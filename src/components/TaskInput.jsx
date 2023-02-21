@@ -13,6 +13,7 @@ export const TaskInput = () => {
                 type: 'addTodo',
                 payload: {
                     id: uuid(),
+                    status: 'active',
                     task,
                     time: new Date().toLocaleString()
 
