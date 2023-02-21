@@ -15,6 +15,7 @@ function getInitialTodo() {
 }
 
 const initialState = {
+    filterStatus: 'All',
     TodoList: getInitialTodo()
 }
 
@@ -60,5 +61,22 @@ export const customReducer = createReducer(initialState, {
             })
             window.localStorage.setItem('TodoList', JSON.stringify(ListArr))
         }
+    },
+
+    checkTodo: (state, action) => {
+        const LocalList = window.localStorage.getItem('TodoList')
+        if (LocalList) {
+            const ListArr = JSON.parse(LocalList)
+            ListArr.forEach((todo, index) => {
+                if (todo.id === action.payload.id) {
+                    ListArr.splice(index, 1, action.payload)
+                    state.TodoList.splice(index, 1, action.payload)
+                }
+            })
+            window.localStorage.setItem('TodoList', JSON.stringify(ListArr))
+        }
+    },
+    filterTodo: (state, action) => {
+        state.filterStatus = action.payload
     }
 })

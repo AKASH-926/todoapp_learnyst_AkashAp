@@ -1,15 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
 import AppTitle from '../components/AppTitle'
-import FilterTask from '../components/FilterTask'
+// import button from '../components/button'
 import TaskInput from '../components/TaskInput'
 import TaskList from '../components/TaskList'
 import '../styles/MainPage.css'
 import { Toaster } from 'react-hot-toast';
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 export const MainPage = () => {
 
 
     const TodoList = useSelector(state => state.custom.TodoList)
+    const filterstatus = useSelector(state => state.custom.filterStatus)
+
+
+    const dispatch = useDispatch()
+    const handlefilter = (status) => {
+        dispatch({
+            type: 'filterTodo',
+            payload: status
+        })
+    }
+
+    const filterTodos = TodoList.filter((item) => {
+        if (filterstatus === 'All') {
+            return true
+        } else if (filterstatus === 'active') {
+            return item.status === 'active'
+        } else {
+            return item.status === 'complete'
+        }
+    })
+
 
     return (
         <>
@@ -17,13 +38,13 @@ export const MainPage = () => {
                 <AppTitle>TODO APP</AppTitle>
                 <TaskInput />
                 <div className="filter-task">
-                    <FilterTask>SHOW ALL TASKS</FilterTask>
-                    <FilterTask>SHOW ACTIVE TASKS</FilterTask>
-                    <FilterTask>SHOW COMPLETED TASKS</FilterTask>
+                    <button onClick={() => handlefilter('All')}>SHOW ALL TASKS</button>
+                    <button onClick={() => handlefilter('active')}>SHOW ACTIVE TASKS</button>
+                    <button onClick={() => handlefilter('complete')}>SHOW COMPLETED TASKS</button>
                 </div>
                 <div>
                     {
-                        TodoList.map((item) => {
+                        filterTodos.map((item) => {
                             return (
                                 <TaskList item={item} key={item.id} />
                             )
