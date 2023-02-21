@@ -1,16 +1,30 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
+export const TaskInput = () => {
+    const [task, settask] = useState()
+    const dispatch = useDispatch()
 
-export class TaskInput extends Component {
-    render() {
-        return (
-            <>
-                <div>
-                    <input type="text" name="" id="" />
-                    <button>ADD</button>
-                </div>
-            </>
-        )
+    function handleClick() {
+        dispatch({
+            type: 'addTodo',
+            payload: {
+                task
+            }
+
+        })
+
     }
+
+
+    return (
+        <>
+            <div>
+                <input type="text" name="task" id="newtask" onChange={(e) => { settask(e.target.value) }} />
+                <button onClick={handleClick}>ADD</button>
+            </div>
+        </>
+    )
+
 }
 
 export default TaskInput
