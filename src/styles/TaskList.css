@@ -1,0 +1,11 @@
+.TaskList-wrap{
+    display: flex;
+
+}
+.task{
+    margin: 0 2% 0 0;
+        width: 400px;
+}
+.task>p{
+    margin:0;
+}
