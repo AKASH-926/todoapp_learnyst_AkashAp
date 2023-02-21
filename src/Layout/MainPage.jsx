@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import AppTitle from '../components/AppTitle'
 import FilterTask from '../components/FilterTask'
 import TaskInput from '../components/TaskInput'

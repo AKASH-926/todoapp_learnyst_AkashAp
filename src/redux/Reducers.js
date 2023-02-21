@@ -33,5 +33,19 @@ export const customReducer = createReducer(initialState, {
             window.localStorage.setItem('TodoList', JSON.stringify([{ ...action.payload }]))
         }
 
+    },
+    deleteTodo: (state, action) => {
+        const LocalList = window.localStorage.getItem('TodoList')
+        if (LocalList) {
+            const ListArr = JSON.parse(LocalList)
+            ListArr.forEach((item, index) => {
+                if (item.id === action.payload) {
+                    ListArr.splice(index, 1)
+                    state.TodoList.splice(index, 1)
+                }
+            })
+            window.localStorage.setItem('TodoList', JSON.stringify(ListArr))
+        }
+
     }
 })
