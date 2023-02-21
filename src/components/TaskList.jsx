@@ -1,9 +1,9 @@
 import React from 'react'
 import '../styles/TaskList.css'
-const TaskList = () => {
+const TaskList = ({ item }) => {
     return (
         <div className='TaskList-wrap'>
-            <div className='task'>DRINK TEA AND COFFEE</div>
+            <div className='task'>{item.task}</div>
             <div> <button>E</button></div>
             <div><button>D</button></div>
         </div>

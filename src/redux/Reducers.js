@@ -29,6 +29,8 @@ export const customReducer = createReducer(initialState, {
                 ...action.payload
             })
             window.localStorage.setItem('TodoList', JSON.stringify(ListArr))
+        } else {
+            window.localStorage.setItem('TodoList', JSON.stringify([{ ...action.payload }]))
         }
 
     }
