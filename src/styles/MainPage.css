@@ -7,10 +7,8 @@
     display: flex;
     justify-content: space-between;
    width: 500px;
-   margin: 3% 0 0 0;
+   margin: 1% 0 0 0;
    flex-wrap: wrap;
-   
-
 }
 .filter-task button{
 font-family: 'Nunito', sans-serif;
@@ -30,6 +28,10 @@ transition: 112ms;
 }
 .witdh140{
     width: 139px;
+}
+.totaltasks{
+    margin-top: 2%;
+    letter-spacing: 6px;
 }
 
 @media only screen and (max-width: 600px) {

@@ -1,10 +1,21 @@
-import React from 'react'
+import React, { Component } from 'react'
 import '../styles/AppTitle.css'
-export default function AppTitle({ children }) {
-    return (
-        <div>
-            <h1 className='Title'>{children}</h1>
-        </div>
 
-    )
+class AppTitle extends Component {
+    constructor({ children }) {
+        super()
+        this.children = children
+    }
+    render() {
+        return (
+            <>
+                <div>
+                    <h1 className='Title'>{this.children}</h1>
+                </div>
+
+            </>
+        )
+    }
 }
+
+export default AppTitle

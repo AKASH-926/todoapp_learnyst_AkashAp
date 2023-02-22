@@ -1,9 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { customReducer } from './Reducers'
+import { TodoSlice } from './Reducers'
 const store = configureStore({
-    reducer: {
-        custom: customReducer
-    }
+    reducer: TodoSlice.reducer
 })
 
 
