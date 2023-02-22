@@ -1,20 +1,21 @@
 .TaskList-wrap{
     display: flex;
+    justify-content: space-around;
     align-items: center;
     margin: 2% 0 0 0;
     border: 3px solid #ffffff7c;
     padding: 1%;
     box-shadow: 0 0 10px #cbcbc86d;
-    background-color: rgba(255, 255, 255, 0.214);
-
+    background-color: rgba(255, 255, 255, 0.173);
 }
 .task{
-    margin: 0 2% 0 0;
         width: 500px;
-        height: 20px;
+        height: auto;
         text-transform: capitalize;
         font-size: 1.0em;
         font-weight: 600;
+        word-wrap: break-word;
+        padding: 0 0 0 1%;
 }
 
 .util-btns{
@@ -22,10 +23,33 @@
     align-items: center;
     gap: 5px;
     height: 25px;
+    margin-left: 2%;
 }
 .util-btns button{
     padding:0 ;
     border: 0;
     background: none;
     cursor: pointer;   
+}
+
+@media only screen and (max-width: 600px) {
+.task {
+        margin: 0 2% 0 0;
+        width: 250px;
+        height: auto;
+        text-transform: capitalize;
+        font-size: 1.0em;
+        font-weight: 600;
+    }
+
+}
+@media only screen and (max-width: 300px) {
+.task {
+        width: 180px;
+        height: 20px;
+        text-transform: capitalize;
+        font-size: 1.0em;
+        font-weight: 600;
+    }
+
 }

@@ -38,8 +38,8 @@ export const MainPage = () => {
                 <AppTitle>TODO APP</AppTitle>
                 <TaskInput />
                 <div className="filter-task">
-                    <button className='witdh125' onClick={() => handlefilter('All')}>ALL TASKS</button>
-                    <button className='witdh125' onClick={() => handlefilter('active')}>ACTIVE TASKS</button>
+                    <button className='witdh140' onClick={() => handlefilter('All')}>ALL TASKS</button>
+                    <button className='witdh140' onClick={() => handlefilter('active')}>ACTIVE TASKS</button>
                     <button onClick={() => handlefilter('complete')}>COMPLETED TASKS</button>
                 </div>
                 <div>
