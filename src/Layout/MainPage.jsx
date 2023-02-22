@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import AppTitle from '../components/AppTitle'
 // import button from '../components/button'
 import TaskInput from '../components/TaskInput'
@@ -38,9 +38,9 @@ export const MainPage = () => {
                 <AppTitle>TODO APP</AppTitle>
                 <TaskInput />
                 <div className="filter-task">
-                    <button onClick={() => handlefilter('All')}>SHOW ALL TASKS</button>
-                    <button onClick={() => handlefilter('active')}>SHOW ACTIVE TASKS</button>
-                    <button onClick={() => handlefilter('complete')}>SHOW COMPLETED TASKS</button>
+                    <button className='witdh125' onClick={() => handlefilter('All')}>ALL TASKS</button>
+                    <button className='witdh125' onClick={() => handlefilter('active')}>ACTIVE TASKS</button>
+                    <button onClick={() => handlefilter('complete')}>COMPLETED TASKS</button>
                 </div>
                 <div>
                     {

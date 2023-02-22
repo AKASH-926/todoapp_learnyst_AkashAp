@@ -2,6 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import '../styles/TaskList.css'
 import toast from 'react-hot-toast';
+
+import deleteIcon from '../assets/delete.png'
+import editicon from '../assets/edit.png'
+import editOk from '../assets/okay.png'
 const TaskList = ({ item }) => {
     const [update, setupdate] = useState(false)
     const [editTask, seteditTask] = useState(item.task)
@@ -74,8 +78,10 @@ const TaskList = ({ item }) => {
             <div className='task'>
                 {update ? <input type='text' value={editTask} onChange={handleUpdate} /> : item.task}
             </div>
-            <div> <button onClick={() => handleEdit(item)}>E</button></div>
-            <div><button onClick={() => handleDelete(item.id)}>D</button></div>
+            <div className='util-btns'> <button onClick={() => handleEdit(item)}> {update ? <img src={editOk} alt='edit' /> : <img src={editicon} alt='edit' />} </button>
+                <button onClick={() => handleDelete(item.id)}> <img src={deleteIcon} alt="delete" /></button>
+            </div>
+
         </div>
     )
 }

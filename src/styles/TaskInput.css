@@ -1,0 +1,27 @@
+.input-wrap{
+    display: flex;
+    justify-content: center;
+position: relative;
+}
+
+.input-wrap>input{
+    
+    border: none;
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 30px;
+    width: 250px;
+   padding: 0 15% 0 5%;
+font-family: 'Nunito', sans-serif;
+font-size: 1.1em;
+}
+.input-wrap>button{
+    position: absolute;
+    background: none;
+ right: 0px;
+ top: 0px;
+ border: none;
+padding: 0;
+cursor: pointer;
+}

@@ -1,11 +1,31 @@
 .TaskList-wrap{
     display: flex;
+    align-items: center;
+    margin: 2% 0 0 0;
+    border: 3px solid #ffffff7c;
+    padding: 1%;
+    box-shadow: 0 0 10px #cbcbc86d;
+    background-color: rgba(255, 255, 255, 0.214);
 
 }
 .task{
     margin: 0 2% 0 0;
-        width: 400px;
+        width: 500px;
+        height: 20px;
+        text-transform: capitalize;
 }
-.task>p{
-    margin:0;
+
+.util-btns{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    height: 25px;
+}
+.util-btns button{
+    padding:0 ;
+    border: 0;
+    background: none;
+    cursor: pointer;
+   
+    
 }
