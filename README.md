@@ -1,18 +1,27 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
+### Tech Stack used React JS
 
 In the project directory, you can run:
 
-### `npm start`
+### 1st step : `npm install`
+
+Installs all require dependencies for app
+
+### 2ns step :`npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The page will reload when you make changes.
+
+## DESKTOP VIEW
+
+![image](https://res.cloudinary.com/dlzsf2clj/image/upload/v1677047466/todo_gilu62.jpg)
+
+## SMARTPHONE VIEW
+
+![image](https://res.cloudinary.com/dlzsf2clj/image/upload/v1677047474/todophone_c8etoc.jpg)
+
+## Todo app Hoisted here (https://todoapp-learnyst-akashap.onrender.com)
 
 ### `npm test`
 
